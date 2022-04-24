@@ -25,22 +25,13 @@ class GameSprite(pygame.sprite.Sprite):
     def reset(self):
         win.blit(self.image, (self.rect.x, self.rect.y))
 
-    def update(self):
-        self.rect.x = randint(0, 800)
-        self.rect.y = randint(0, 600)
-
-        self.wid = randint(0, 500)
-        self.hie = randint(0, 500)
-
-ball = GameSprite('ball.png', 100, 100, 100, 100, 0)
-
 go = True
 while True:
     win.fill(gray)
     [exit() for i in pygame.event.get() if i.type == pygame.QUIT]
     
-    ball.update()
-    ball.reset()
+    if go:
+        pass
 
     pygame.display.flip()
     clock.tick(fps)
