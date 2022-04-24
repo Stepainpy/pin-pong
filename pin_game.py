@@ -14,9 +14,7 @@ clock = pygame.time.Clock()
 class GameSprite(pygame.sprite.Sprite):
     def __init__(self, pl_image, x, y, wid, hie, speed):
         pygame.sprite.Sprite.__init__(self)
-        self.wid = wid
-        self.hie = hie
-        self.image = pygame.transform.scale(pygame.image.load(pl_image), (self.wid, self.hie))
+        self.image = pygame.transform.scale(pygame.image.load(pl_image), (wid, hie))
         self.speed = speed
         self.rect = self.image.get_rect()
         self.rect.x = x
